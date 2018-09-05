@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
   
   @Input() itemCart = Object.keys;
   @Input() itemCount;
@@ -14,5 +14,7 @@ export class CartComponent {
   toggleClass(count) {
     this.isSelected = (count == 0) ? false : !this.isSelected;
   }
+
+  ngOnInit() {}
 
 }
