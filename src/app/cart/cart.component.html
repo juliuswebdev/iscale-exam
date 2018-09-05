@@ -1,6 +1,6 @@
 <header>
   <div class="cart-area clear-fix">
-    <div class="cart-label" (click)="toggleClass(itemCount)" [class.active]="isSelected">My Cart <span>( {{ itemCount }} )</span></div>
+    <div class="cart-label" (click)="toggleClass(itemCount)" [class.active]="isSelected"><span class="is-pc">My Cart</span><span class="is-sp"><img src="../../assets/images/cart-sp-icon.png" alt=""></span> <span>( {{ itemCount }} )</span></div>
     <div class="item-dropdown" [class.active]="isSelected">
       <div class="item-blk clear-fix" *ngFor="let item of itemCart">
         <div class="image-cont">

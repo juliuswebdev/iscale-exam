@@ -17,6 +17,9 @@ header {
             color: $font-color-02;
             font-size: 12px;
             border: 1px solid transparent;
+            .is-sp {
+                display: none;
+            }
             &.active {
                 color: $font-color-01;
                 background-color: #fff;
@@ -79,6 +82,17 @@ header {
 @media screen and (max-width: 768px) {
     header {
         .cart-area {
+            .cart-label {
+                padding: 7px;
+                .is-sp {
+                    margin-right: 2px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .is-pc {
+                    display: none;
+                }
+            }
             width: 100%;
             padding: 0 20px;
             .item-dropdown {
