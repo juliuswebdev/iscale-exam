@@ -1,0 +1,89 @@
+// Cart Section SCSS
+@import '../../styles';
+header {
+    margin: 15px 0 0;
+    background-color: $header-bg-color;
+    .cart-area {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 1240px;
+        height: 30px;
+        .cart-label {
+            position: relative;
+            z-index: 99;
+            float: right;
+            padding: 9px;
+            color: $font-color-02;
+            font-size: 12px;
+            border: 1px solid transparent;
+            &.active {
+                color: $font-color-01;
+                background-color: #fff;
+                border-top: 1px solid $bd-light-grey;
+                border-right: 1px solid $bd-light-grey;
+                border-bottom: 1px solid #fff;
+                border-left: 1px solid $bd-light-grey;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .item-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            z-index: 98;
+            margin-top: 30px;
+            padding: 20px 20px 0 20px;
+            width: 88%;
+            max-width: 300px;
+            border: 1px solid $bd-light-grey;
+            background-color: #fff;
+            .item-blk {
+                margin-bottom: 20px;
+                .image-cont {
+                    float: left;
+                    width: 27%;
+                    .image {
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .item-cont {
+                    float: left;
+                    width: 73%;
+                    padding-left: 10px;
+                    color: $font-color-01;
+                    .title {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                    .price {
+                        margin-bottom: 13px;
+                        .bill {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .cart-area {
+            width: 100%;
+            padding: 0 20px;
+            .item-dropdown {
+                right: 20px;
+            }
+        }
+    }
+}

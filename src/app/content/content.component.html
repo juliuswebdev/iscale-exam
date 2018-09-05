@@ -1,0 +1,26 @@
+<div class="product-content clear-fix">
+  <div class="product-image">
+    <div class="image-cont">
+      <img [src]="product.image" [alt]="product.title">
+    </div>
+  </div>
+  <div class="product-details">
+      <form action="">
+        <p class="title">{{ product.title }}</p>
+        <p class="price"><span class="currency">&#36;</span>{{ product.price }}</p>
+        <p class="description">{{ product.description }}</p>
+        <p class="size">
+          Size
+          <span class="required">*</span>
+          <span class="selected-size">{{ selectedSize }}</span>
+        </p>
+        <div class="size-buttons-content clear-fix">
+          <div class="size-button" *ngFor="let sizeItem of sizes">
+            <input (click)="getSize(sizeItem)" type="radio" id="{{sizeItem}}" name="size">
+            <label for="{{sizeItem}}">{{sizeItem}}</label>
+          </div>
+        </div>
+        <button (click)="addToCart()">Add to Cart</button>
+    </form>
+  </div>
+</div>

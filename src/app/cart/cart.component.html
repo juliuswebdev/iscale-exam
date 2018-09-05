@@ -1,0 +1,17 @@
+<header>
+  <div class="cart-area clear-fix">
+    <div class="cart-label" (click)="toggleClass(itemCount)" [class.active]="isSelected">My Cart <span>( {{ itemCount }} )</span></div>
+    <div class="item-dropdown" [class.active]="isSelected">
+      <div class="item-blk clear-fix" *ngFor="let item of itemCart">
+        <div class="image-cont">
+          <p class="image"><img [src]="item.image" [alt]="item.title"></p>
+        </div>
+        <div class="item-cont">
+          <p class="title">{{ item.title }}</p>
+          <p class="price"><span class="qty">{{ item.qty }}</span>x <span class="bill">&#36;{{ item.price }}</span></p>
+          <p class="item-size">Size: {{ item.size }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

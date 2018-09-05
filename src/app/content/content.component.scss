@@ -1,0 +1,134 @@
+// Content Section SCSS
+@import '../../styles';
+.product-content {
+    margin: 36px auto 30px;
+    width: 80%;
+    max-width: 1240px;
+    .product-details,
+    .product-image {
+        float: left;
+        width: 50%;
+    }
+    .product-image {
+        margin-bottom: 20px;
+        .image-cont {
+            max-width: 400px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .product-details {
+        padding-left: 7.5em;
+        .title {
+            margin-bottom: 28px;
+            color: $font-color-01;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .price {
+            margin-bottom: 24px;
+            color: $font-color-01;
+            font-weight: bold;
+        }
+        .description {
+            margin-bottom: 30px;
+            color: $font-color-02;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .size {
+            color: $font-color-02;
+            font-weight: bold;
+            text-transform: uppercase;
+            .required {
+                margin-right: 5px;
+                color: $required;
+            }
+            .selected-size {
+                color: $font-color-01;
+                font-weight: bold;
+            }
+        }
+        .size-buttons-content {
+            margin: 13px 0 20px;
+            .size-button {
+                float: left;
+                display: table;
+                margin-right: 5px;
+                width: 40px;
+                height: 40px;
+                &:last-child {
+                    margin: 0;
+                }
+                label {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: $font-color-02;
+                    text-align: center;
+                    border: 1px solid $bd-light-grey;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                input {
+                    display: none;
+                }
+                input:checked + label {
+                    color: $font-color-01;
+                    border: 2px solid $bd-dark-grey;
+                }
+            }
+        }
+        button {
+            display: block;
+            padding: 8px 19px;
+            border: 2px solid $bd-dark-grey;
+            background: transparent;
+            outline: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            -o-transition: .2s ease-in-out all;
+            -moz-transition: .2s ease-in-out all;
+            -ms-transform: .2s ease-in-out all;
+            transition: .2s ease-in-out all;
+            &:hover {
+                color: #fff;
+                cursor: pointer;
+                background-color: $bd-dark-grey;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .product-content {
+        .product-details {
+            padding-left: 4em;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-content {
+        width: 100%;
+        padding: 0 20px;
+        .product-image,
+        .product-details {
+           float: none;
+           width: 100%;
+        }
+        .product-details {
+            padding-left: 0;
+        }
+        .product-image {
+            .image-cont {
+                width: 100%;
+                max-width: 768px;
+            }
+        }
+    }
+}
